@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").toggle();
+                $("#div1").fadeToggle(3);
+                $("#div2").fadeToggle(30);
+                $("#div3").fadeToggle(300);
+                $("#div4").fadeToggle(3000);
+                $("#div5").fadeToggle(30000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <style>
+        .button {
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+
+
+        h1 {
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+
+
+    <button class="button"> <span>Toggle between hide and show </span></button>
+
+<center>
+    <div id="div1" style="width:40px;height:40px;">
+        <h1>s </h1>
+    </div>
+    <br>
+    <div id="div2" style="width:40px;height:40px;">
+        <h1>a </h1>
+    </div>
+    <br>
+    <div id="div3" style="width:40px;height:40px;">
+        <h1>h </h1>
+    </div>
+    <br>
+    <div id="div4" style="width:40px;height:40px;">
+        <h1>i </h1>
+    </div>
+    <br>
+    <div id="div5" style="width:40px;height:40px;">
+        <h1>l </h1>
+    </div></center>
+
+
+
+</body>
+
+</html>
